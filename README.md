@@ -1,54 +1,20 @@
 # Colorize-Black-and-White-image-with-Neural-Network
 
-_________________________________________________________________
-Layer (type)                 Output Shape              Param #   
-=================================================================
-encoder_input (InputLayer)   (None, 256, 256, 1)       0         
-_________________________________________________________________
-conv2d_4 (Conv2D)            (None, 128, 128, 64)      640       
-_________________________________________________________________
-conv2d_5 (Conv2D)            (None, 64, 64, 128)       73856     
-_________________________________________________________________
-conv2d_6 (Conv2D)            (None, 32, 32, 256)       295168    
-_________________________________________________________________
-flatten_2 (Flatten)          (None, 262144)            0         
-_________________________________________________________________
-latent_vector (Dense)        (None, 256)               67109120  
-=================================================================
-Total params: 67,478,784
-Trainable params: 67,478,784
-Non-trainable params: 0
-_________________________________________________________________
-_________________________________________________________________
-Layer (type)                 Output Shape              Param #   
-=================================================================
-decoder_input (InputLayer)   (None, 256)               0         
-_________________________________________________________________
-dense_2 (Dense)              (None, 262144)            67371008  
-_________________________________________________________________
-reshape_2 (Reshape)          (None, 32, 32, 256)       0         
-_________________________________________________________________
-conv2d_transpose_4 (Conv2DTr (None, 64, 64, 256)       590080    
-_________________________________________________________________
-conv2d_transpose_5 (Conv2DTr (None, 128, 128, 128)     295040    
-_________________________________________________________________
-conv2d_transpose_6 (Conv2DTr (None, 256, 256, 64)      73792     
-_________________________________________________________________
-decoder_output (Conv2DTransp (None, 256, 256, 3)       1731      
-=================================================================
-Total params: 68,331,651
-Trainable params: 68,331,651
-Non-trainable params: 0
-_________________________________________________________________
-_________________________________________________________________
-Layer (type)                 Output Shape              Param #   
-=================================================================
-encoder_input (InputLayer)   (None, 256, 256, 1)       0         
-_________________________________________________________________
-encoder (Model)              (None, 256)               67478784  
-_________________________________________________________________
-decoder (Model)              (None, 256, 256, 3)       68331651  
-=================================================================
-Total params: 135,810,435
-Trainable params: 135,810,435
-Non-trainable params: 0
+Colorizing old black and white images usually required human interventions. The given model uses Autoencoder , which has been trained to convert a B&W image to a RGB color image. The model is been trained for some 400 samples. You can add some more to the dataset and retrain. 
+
+## Getting Started
+
+1) Clone the repository into your system. 
+2) I used the opencountry image dataset from http://cvcl.mit.edu/database.htm
+3) Download them and place it in the apporpriate folder.
+4) Use the prepareData.py file to create a data.pkl which contains the data as X(256,256,1) ,Y(256,256,3)
+5) Use the program.py to train the autoencoder and save the weights as 'finalmodel.h5'
+6) Use the test.py for testing some samples.
+
+### Prerequisites
+
+Python 3 with: Keras , OpenCv , Tensorflow 
+
+
+### Installing
+
