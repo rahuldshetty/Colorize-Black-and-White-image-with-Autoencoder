@@ -15,6 +15,14 @@ Colorizing old black and white images usually required human interventions. The 
 
 Python 3 with: Keras , OpenCv , Tensorflow 
 
+### Model Layers
+![Model](https://raw.githubusercontent.com/rahuldshetty/Colorize-Black-and-White-image-with-Neural-Network/master/screen/model%20design.PNG)
 
-### Installing
+### ScreenShots on some train data
+![Sample1](https://raw.githubusercontent.com/rahuldshetty/Colorize-Black-and-White-image-with-Neural-Network/master/screen/sample1.PNG)
+![Sample2](https://raw.githubusercontent.com/rahuldshetty/Colorize-Black-and-White-image-with-Neural-Network/master/screen/sample2.PNG)
+![Sample3](https://raw.githubusercontent.com/rahuldshetty/Colorize-Black-and-White-image-with-Neural-Network/master/screen/sample3.PNG)
+
+### Unseen Sample
+![Unseen Data](https://raw.githubusercontent.com/rahuldshetty/Colorize-Black-and-White-image-with-Neural-Network/master/screen/unseen.PNG)
 
