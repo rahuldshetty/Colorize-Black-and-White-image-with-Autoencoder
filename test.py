@@ -15,30 +15,12 @@ import os
 import cv2
 
 autoencoder = load_model('finalmodel.h5')
-'''
+
 data=pd.read_pickle('data.pkl')
 print("model loaded...")
 x=data['x']
 y=data['y']
-'''
-unseenClr=cv2.imread('unseen.jpg',1)
-unseenBW=cv2.cvtColor(unseenClr,cv2.COLOR_BGR2GRAY)
 
-unseenClr=unseenClr.astype('float32')/255
-unseenBW1=unseenBW.astype('float32')/255
-unseenBW=unseenBW1.copy()
-unseenBW=unseenBW.reshape(1,256,256,1)
-
-unseenBW=np.asarray(unseenBW)
-
-cv2.imshow('B&W input',unseenBW1)
-cv2.imshow('Real Image',unseenClr)
-
-predicted=autoencoder.predict(unseenBW)
-cv2.imshow('Predicted',predicted.reshape(256,256,3))
-
-cv2.waitKey(0)
-'''
 xyy=[]
 yyx=[]
 for i in range(len(x)):
@@ -65,4 +47,3 @@ while True:
     cv2.waitKey(0)
     s=input("Type to continue...")
     cv2.destroyAllWindows()
-'''
